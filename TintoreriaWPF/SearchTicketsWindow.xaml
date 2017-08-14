@@ -1,0 +1,17 @@
+﻿<Window x:Class="TintoreriaWPF.SearchTicketsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="SearchTicketsWindow" Height="300" Width="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Button Grid.Row="0" Content="Search Ticket by Garment" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="8" Command="{Binding SearchTicketsCommand}"/>
+        <Button Grid.Row="1" Content="Search Ticket by Color" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="8" Command="{Binding SearchColorsCommand}"/>
+        <Button Grid.Row="2" Content="Search Ticket by Client" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="8" Command="{Binding SearchClientsCommand}"/>
+        <Button Grid.Row="3" Content="Search Ticket by Ticket Id" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="8" Command="{Binding SearchTicketsIdCommand}"/>
+    </Grid>
+</Window>

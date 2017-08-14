@@ -1,0 +1,8 @@
+packages/
+*.suo
+bin/
+obj/
+.hgignore
+UpgradeLog.htm
+*.orig
+.hg*

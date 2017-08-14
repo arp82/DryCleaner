@@ -1,0 +1,23 @@
+﻿<Window x:Class="TintoreriaWPF.ReportsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ReportsWindow" Height="300" Width="300">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Button Grid.Row="0" Grid.Column="0"  Content="List tickets not retrieved in delivery date" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="8" Command="{Binding ListTicketsNotRetrievedCommand}"/>
+        <Button Grid.Row="1" Grid.Column="0"  Content="List best clients" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="8" Command="{Binding ListBestClientsCommand}"/>
+        <Button Grid.Row="2" Grid.Column="0"  Content="List daily earnings" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="8" Command="{Binding ListDailyEarningsCommand}"/>
+        <Button Grid.Row="3" Grid.Column="0"  Content="List tickets not fully paid yet" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="8" Command="{Binding ListTicketsNotFullyPaidCommand}"/>
+        <Button Grid.Row="4" Grid.Column="0"  Content="List earnings by garment and garment type" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="8" Command="{Binding ListEarningsByGarmentAndGarmentTypeCommand}"/>
+
+    </Grid>
+</Window>

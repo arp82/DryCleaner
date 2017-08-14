@@ -1,0 +1,28 @@
+﻿<Window x:Class="TintoreriaWPF.SearchTicketByTicketIdWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="SearchTicketByTicketIdWindow" Height="300" Width="300">
+    <Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="0" Grid.Column="0" Text="Ticket id:" Margin="8"/>
+            <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding TicketId}" Margin="4"/>
+            <ListBox Grid.Row="2" Grid.ColumnSpan="3" Grid.Column="0" ItemsSource="{Binding Path=IdTickets, UpdateSourceTrigger=PropertyChanged}" Margin="4" ScrollViewer.VerticalScrollBarVisibility="Visible"/>
+
+        </Grid>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" >
+            <Button Content="Search" Margin="9" Padding="5" Command="{Binding SearchTicketByTicketIdCommand}"/>
+        </StackPanel>
+        
+    </Grid>
+</Window>

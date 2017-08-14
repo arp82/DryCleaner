@@ -1,0 +1,27 @@
+﻿<Window x:Class="TintoreriaWPF.ListDailyEarningsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ListEarningsByGarmentAndGarmentTypeWindow" Height="400" Width="550">
+    <Grid ScrollViewer.VerticalScrollBarVisibility="Visible">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="250"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+       
+        <TextBlock Grid.Row="0" Grid.Column="0" Text="Earning entries for date: " Margin="8"/>
+        <DatePicker Grid.Row="0" Grid.Column="1" SelectedDate="{Binding DeliveryDate, ConverterCulture='es-ES'}" Margin="8"/>
+        <Button Command="{Binding PerformSearchCommand}" Margin="8" Grid.Row="0" Grid.Column="2" Content="Search"/>
+        <ListBox Grid.ColumnSpan="3" Grid.Row="1" Grid.Column="0" ItemsSource="{Binding Path=DailyEarnings, UpdateSourceTrigger=PropertyChanged}" Margin="4" ScrollViewer.VerticalScrollBarVisibility="Visible"/>
+        <StackPanel Grid.Row="3" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Bottom" Orientation="Horizontal">
+            <Button Content="Exit" Padding="5" Margin="9" Command="{Binding ExitCommand}"/>
+        </StackPanel>
+        
+    </Grid>
+    
+</Window>
